@@ -4,4 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.miu.dinnerdecider.MainActivity"/>
+    tools:context="com.miu.dinnerdecider.MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_marginTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dd_logo" />
+
+        <TextView
+            android:id="@+id/tvChoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text=" "
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textSize="24dp" />
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="ADD FOOD"
+            android:onClick="onClickAdd"/>
+        <Button
+            android:id="@+id/btnDecide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="DECIDE"
+            android:onClick="onClickDecide"/>
+    </TableLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>
