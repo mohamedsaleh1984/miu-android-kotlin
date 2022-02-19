@@ -1,5 +1,6 @@
 package com.miu.dinnerdecider
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.miu.firstname.R
@@ -12,7 +13,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main);
+
+        getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.gray_background));
     }
 
     fun onClickDecide(view: android.view.View){
