@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lesson2">
         <activity
-            android:name="com.miu.dinnerdecider.MainActivity"
+            android:name="com.miu.assignment.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

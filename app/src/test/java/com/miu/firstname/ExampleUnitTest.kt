@@ -1,4 +1,4 @@
-package com.miu.dinnerdecider
+package com.miu.assignment
 
 import org.junit.Test
 
