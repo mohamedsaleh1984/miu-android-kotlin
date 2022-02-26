@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lesson2">
+        <!---->
         <activity
-            android:name="com.miu.assignment.MainActivity"
+            android:name=".WalmartActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
