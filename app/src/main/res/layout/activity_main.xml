@@ -42,13 +42,16 @@
     </TableRow>
 
     <TableRow
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="fill_parent">
         <TextView
             android:text="Version"
+            android:layout_weight="1"
             android:background="@color/pink_color"/>
+
         <TextView
             android:text="Code Name"
+            android:layout_weight="1"
             android:background="@color/pink_color"/>
     </TableRow>
     <TableRow

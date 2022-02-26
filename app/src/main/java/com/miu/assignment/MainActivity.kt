@@ -3,6 +3,8 @@ package com.miu.assignment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TableRow
+import com.miu.assignment.R
+
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -13,10 +15,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickAdd(view: android.view.View){
-        /*
+
         val tableRow = TableRow(getApplicationContext())//this
         //set new Table row Layout Paramters
-        val layoutParams = TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
+      /*  val layoutParams = TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
         tableRow.setLayoutParams(layoutParams)
         //Add values into row by calling addView()
 
