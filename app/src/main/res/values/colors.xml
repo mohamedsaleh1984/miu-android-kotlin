@@ -8,10 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray_background">#bbc2ca</color>
-    <color name="red_color">#DD1212</color>
-    <color name="red2_color">#610505</color>
-    <color name="yellow1_color">#DDC706</color>
-    <color name="yellow2_color">#FFEB3B</color>
-    <color name="blue1_color">#1734D6</color>
-    <color name="blue2_color">#061778</color>
+    <color name="pink_color">#B9F43698</color>
+
 </resources>

@@ -2,20 +2,27 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:stretchColumns="0">
+    android:id="@+id/tableLayoutRef"
+
+    android:stretchColumns="*">
     <TableRow
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        >
         <EditText
-            android:layout_width="match_parent"
+            android:id="@+id/editTextAndroidVersion"
+            android:layout_width="fill_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:hint="Enter Android Version" />
     </TableRow>
 
     <TableRow>
         <EditText
+            android:id="@+id/editTextAndroidCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:hint="Enter Android Code Name" />
     </TableRow>
 
@@ -30,26 +37,43 @@
             android:id="@+id/add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClickAdd"
+            android:layout_weight="1"
             android:text="Add" />
     </TableRow>
 
     <TableRow
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="fill_parent">
-        <TextView android:background="@color/red_color"/>
-        <TextView android:background="@color/red2_color"/>
+        <TextView
+            android:text="Version"
+            android:layout_weight="1"
+            android:background="@color/pink_color"/>
+
+        <TextView
+            android:text="Code Name"
+            android:layout_weight="1"
+            android:background="@color/pink_color"/>
     </TableRow>
     <TableRow
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
-        <TextView android:background="@color/yellow1_color"/>
-        <TextView android:background="@color/yellow2_color"/>
+        <TextView
+            android:text="Android 9.0"
+            android:background="@color/pink_color"/>
+        <TextView
+            android:text="Pie"
+            android:background="@color/pink_color"/>
     </TableRow>
 
     <TableRow
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
-        <TextView android:background="@color/blue1_color"/>
-        <TextView android:background="@color/blue2_color"/>
+        <TextView
+            android:text="Android 8.0"
+            android:background="@color/pink_color"/>
+        <TextView
+            android:text="Oreo"
+            android:background="@color/pink_color"/>
     </TableRow>
 </TableLayout>
