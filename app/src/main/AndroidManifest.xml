@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lesson2">
         <activity
-            android:name="com.miu.assigfour.MainActivity"
+            android:name=".ShoppingCategory"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
