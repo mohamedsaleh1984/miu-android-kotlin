@@ -27,12 +27,12 @@
         android:layout_marginBottom="30dp"
         android:layout_gravity="center" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:text="Enter address (required)" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Enter address (required)" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -45,25 +45,25 @@
         android:backgroundTint="@color/blue_walmart"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        />
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password (required)"
-        android:layout_marginLeft="30dp"/>
+     />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password (required)"
+            android:layout_marginLeft="30dp"/>
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Enter your password"
-        android:inputType="textPassword"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:backgroundTint="@color/blue_walmart"
-        android:minHeight="48dp" />
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter your password"
+            android:inputType="textPassword"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/blue_walmart"
+            android:minHeight="48dp" />
 
     <TextView
         android:id="@+id/tvForgetPwd"
