@@ -44,8 +44,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickSignIn(view: View) {
-        var userName = editTextTextEmailAddress.text.toString();
-        var password = editTextTextPassword.text.toString();
+        var userName = editTextEmailAddress.text.toString();
+        var password = editTextPassword.text.toString();
 
         if (userName.isNullOrEmpty()) {
             Toast.makeText(this, "Username is required.", Toast.LENGTH_LONG).show()
@@ -59,11 +59,8 @@ class MainActivity : AppCompatActivity() {
 
         userInfo = validateUserInputs(userName, password);
         if (userInfo != null) {
-
             var shoppingIntent = Intent(this, ShoppingCategory::class.java)
-            //   Log.i("ddd", userInfo.toString())
             shoppingIntent.putExtra("user", userInfo)
-            shoppingIntent.putExtra("name", "Mohamed Saleh")
             startActivity(shoppingIntent)
         } else {
             Toast.makeText(this, "Wrong username or password.", Toast.LENGTH_LONG).show()
@@ -86,5 +83,26 @@ class MainActivity : AppCompatActivity() {
     fun onCreateUser(view: View) {
         var createIndent: Intent = Intent(this@MainActivity, CreateUser::class.java)
         startActivity(createIndent)
+    }
+
+    fun onForgetPassword(view:View){
+        var emailAddress:String= "";
+        for (user in usersList) {
+            if (user.emailId?.lowercase().equals(editTextEmailAddress.text.toString())) {
+                emailAddress = user.emailId.toString();
+                break;
+            }
+        }
+        
+        if(emailAddress.length > 0){
+            val intent = Intent()
+            intent.action = Intent.ACTION_SEND
+            intent.type = "text/plain"
+            intent.putExtra(Intent.EXTRA_TEXT, emailAddress)
+            startActivity(intent)
+        }
+        else{
+            Toast.makeText(this, "Email is not found", Toast.LENGTH_LONG).show()
+        }
     }
 }
