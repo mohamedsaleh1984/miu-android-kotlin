@@ -2,12 +2,10 @@ package com.miu.assigfour
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_shopping_category.*
 
 class MainActivity : AppCompatActivity() {
     var usersList: ArrayList<User> = ArrayList<User>();
@@ -16,14 +14,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if(savedInstanceState?.get("user") !== null)
-        {
-            val intent = intent
-            val userFromCreateUserActivity = intent.getSerializableExtra("user")
-            userInfo = userFromCreateUserActivity as User;
-            usersList.add(User(userInfo?.firstName, userInfo?.lastName, userInfo?.emailId, userInfo?.pwd));
 
+        val intent = intent
+        val userFromCreateUserActivity = intent.getSerializableExtra("user")
+        if (userFromCreateUserActivity != null) {
+            userInfo = userFromCreateUserActivity as User;
+            usersList.add(
+                User(
+                    userInfo?.firstName,
+                    userInfo?.lastName,
+                    userInfo?.emailId,
+                    userInfo?.pwd
+                )
+            );
         }
+
 
         usersList.add(User("Mohamed", "Saleh", "Mohamed@hotmail.com", "password"));
         usersList.add(User("Max", "Pain", "mohamedsaleh1984@hotmail.com", "password"));
@@ -31,6 +36,11 @@ class MainActivity : AppCompatActivity() {
         usersList.add(User("Tolu", "Ademi", "Tolu@hotmail.com", "password"));
         usersList.add(User("Fomi", "Deleki", "Fomi@hotmail.com", "password"));
         usersList.add(User("mega", "cccc", "1", "1"));
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Toast.makeText(this, "onResume.", Toast.LENGTH_SHORT).show()
     }
 
     fun onClickSignIn(view: View) {
@@ -51,9 +61,9 @@ class MainActivity : AppCompatActivity() {
         if (userInfo != null) {
 
             var shoppingIntent = Intent(this, ShoppingCategory::class.java)
-         //   Log.i("ddd", userInfo.toString())
+            //   Log.i("ddd", userInfo.toString())
             shoppingIntent.putExtra("user", userInfo)
-            shoppingIntent.putExtra("name","Mohamed Saleh")
+            shoppingIntent.putExtra("name", "Mohamed Saleh")
             startActivity(shoppingIntent)
         } else {
             Toast.makeText(this, "Wrong username or password.", Toast.LENGTH_LONG).show()
@@ -73,12 +83,8 @@ class MainActivity : AppCompatActivity() {
         return null
     }
 
-    fun onCeateAccount(view: View) {
+    fun onCreateUser(view: View) {
         var createIndent: Intent = Intent(this@MainActivity, CreateUser::class.java)
         startActivity(createIndent)
-
-       // usersList.add(User(userInfo?.firstName, userInfo?.lastName, userInfo?.emailId, userInfo?.pwd));
     }
-
-
 }
