@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="151dp"
         android:layout_height="92dp"
+        android:layout_gravity="center"
         android:layout_marginTop="1dp"
         android:contentDescription="@string/walmartlogo"
         android:scaleType="fitCenter"
-        android:layout_gravity="center"
-        android:src="@drawable/walmartlogo"
-        />
+        android:src="@drawable/walmartlogo" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign in to your account"
-        android:textSize="23dp"
-        android:fontFamily="sans-serif-black"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="30dp"
-        android:layout_gravity="center" />
+        android:fontFamily="sans-serif-black"
+        android:text="Sign in to your account"
+        android:textSize="23dp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -38,31 +37,31 @@
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/blue_walmart"
         android:ems="10"
         android:hint="Enter your email"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        android:backgroundTint="@color/blue_walmart"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        />
+        android:minHeight="48dp" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password (required)"
-        android:layout_marginLeft="30dp"/>
+        android:layout_marginLeft="30dp"
+        android:text="Password (required)" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Enter your password"
-        android:inputType="textPassword"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:backgroundTint="@color/blue_walmart"
+        android:ems="10"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
         android:minHeight="48dp" />
 
     <TextView
@@ -85,8 +84,8 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="50dp"
         android:background="@color/blue_walmart"
-        android:text="Sing In"
         android:onClick="onClickSignIn"
+        android:text="Sing In"
         android:textColor="#000000" />
 
     <Button
@@ -97,6 +96,19 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
+        android:onClick="onCeateAccount"
+        android:text="Create a new account"
+        android:textColor="#1976D2" />
+
+    <Button
+        android:id="@+id/btnTEST"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/white"
+        android:onClick="onText"
         android:text="Create a new account"
         android:textColor="#1976D2" />
 </LinearLayout>
