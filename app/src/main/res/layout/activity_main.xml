@@ -86,7 +86,7 @@
         android:background="@color/blue_walmart"
         android:onClick="onClickSignIn"
         android:text="Sing In"
-        android:textColor="#000000" />
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/btnCreateNewAcct"
@@ -97,18 +97,6 @@
         android:layout_marginRight="30dp"
         android:background="@color/white"
         android:onClick="onCeateAccount"
-        android:text="Create a new account"
-        android:textColor="#1976D2" />
-
-    <Button
-        android:id="@+id/btnTEST"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:background="@color/white"
-        android:onClick="onText"
         android:text="Create a new account"
         android:textColor="#1976D2" />
 </LinearLayout>
