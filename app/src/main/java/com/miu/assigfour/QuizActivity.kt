@@ -22,58 +22,52 @@ class QuizActivity : AppCompatActivity() {
 
         //Radio Buttons
         rbReadOnly.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (isChecked) {
+            if (isChecked)
                 q1 = true;
-            }
         };
         rbCanbeChange.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (isChecked) {
+            if (isChecked)
                 q1 = false;
-            }
         };
         rbStringInter.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (isChecked) {
+            if (isChecked)
                 q1 = false;
-            }
         };
 
         //CheckBoxList
         chkExtensionFunction.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (isChecked && chkNullSafety.isChecked) {
+            if (isChecked && chkNullSafety.isChecked)
                 q2 = true;
-            }
         }
         chkNullSafety.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (isChecked && chkExtensionFunction.isChecked) {
+            if (isChecked && chkExtensionFunction.isChecked)
                 q2 = true;
-            }
         }
         chkNotFunctional.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (isChecked) {
+            if (isChecked)
                 q2 = false;
-            }
         }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun onSubmit(view: View) {
-        var stringMessage:String="";
+        var stringMessage: String = "";
         val dateTime = LocalDateTime.now();
-        var dateTimeFormatted:String = dateTime.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM));
+        var dateTimeFormatted: String =
+            dateTime.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM));
 
-        if(q1 && q2){
-            stringMessage ="Congratulations, You submitted on ${dateTimeFormatted}, Your achieved 100%"
-        }
-        else if(q1 || q2){
-            stringMessage ="Congratulations, You submitted on ${dateTimeFormatted}, Your achieved 50%"
-        }
-        else if(q1 == false &&q2 == false){
-            stringMessage ="Try again, You submitted on ${dateTimeFormatted}, Your achieved 0%"
+        if (q1 && q2) {
+            stringMessage =
+                "Congratulations, You submitted on ${dateTimeFormatted}, Your achieved 100%"
+        } else if (q1 || q2) {
+            stringMessage =
+                "Congratulations, You submitted on ${dateTimeFormatted}, Your achieved 50%"
+        } else if (q1 == false && q2 == false) {
+            stringMessage = "Try again, You submitted on ${dateTimeFormatted}, Your achieved 0%"
         }
 
-        // build alert dialog
+
         val dialogBuilder = AlertDialog.Builder(this)
-        // set message of alert dialog
         dialogBuilder.setMessage(stringMessage)
             .setCancelable(false)
             .setPositiveButton("Ok", DialogInterface.OnClickListener { dialog, id -> dialog.cancel() })
