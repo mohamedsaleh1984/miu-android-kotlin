@@ -1,5 +1,6 @@
 package com.miu.assigfour
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -110,8 +111,13 @@ class ItemsListActivity : AppCompatActivity() {
         recyclerView1.adapter = adapter
 
         adapter.onItemClick = {product ->
-            Toast.makeText(this,product.Title,Toast.LENGTH_SHORT).show();
-
+            var itemActivityIntent = Intent(this, ItemActivity::class.java)
+            itemActivityIntent.putExtra("id",product.ItemId )
+            itemActivityIntent.putExtra("name",product.Title )
+            itemActivityIntent.putExtra("desc",product.Desc )
+            itemActivityIntent.putExtra("image",product.Image )
+            itemActivityIntent.putExtra("color",product.Color )
+            startActivity(itemActivityIntent)
         }
     }
 }
