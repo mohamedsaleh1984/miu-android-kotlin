@@ -3,4 +3,12 @@
     <string name="walmartlogo">Walmart Logo</string>
     <string name="question1">What is an immutable variable?</string>
     <string name="question2">What are the features you think are there in Kotlin but not in Java?</string>
+    <string-array name="clothingItems">
+        <item></item>
+    </string-array>
+    <string-array name="techItems">
+        <item>IPhoneGreen</item>
+        <item>IPhoneBlue</item>
+        <item>Mac</item>
+    </string-array>
 </resources>

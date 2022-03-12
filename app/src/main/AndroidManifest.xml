@@ -9,15 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lesson2">
-<!--        <activity-->
-<!--            android:name=".QuizActivity"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".CreateUser"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".ShoppingCategory"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".ItemsList"
+            android:exported="false" />
+        <!-- <activity -->
+        <!-- android:name=".QuizActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".CreateUser" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".ShoppingCategory" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".ShoppingCategory"
             android:exported="true">
