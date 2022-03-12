@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_layout.view.*
 
 class ItemsListAdapter (var blist:ArrayList<Product>) : RecyclerView.Adapter<ItemsListAdapter.ItemViewHolder>(){
+    var onItemClick: ((Product) -> Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemsListAdapter.ItemViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout,parent,false)
         return ItemViewHolder(view)
@@ -17,11 +19,18 @@ class ItemsListAdapter (var blist:ArrayList<Product>) : RecyclerView.Adapter<Ite
         holder.itemView.tvPrice.text = "Price : " + blist[position].Price.toString()
         holder.itemView.tvColor.text = "Color : " + blist[position].Color.toString()
         holder.itemView.imgViewPic.setImageResource(blist[position].Image)
+
     }
 
     override fun getItemCount(): Int {
         return blist.size
     }
 
-    inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        init {
+            itemView.setOnClickListener {
+                onItemClick?.invoke(blist[adapterPosition])
+            }
+        }
+    }
 }

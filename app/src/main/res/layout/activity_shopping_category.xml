@@ -123,6 +123,7 @@
                     android:onClick="onSelectCategory"
                     android:padding="10dp"
                     android:tag="Beauty"
+
                     android:src="@drawable/beauty" />
 
                 <TextView
