@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="@string/question1"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/rbReadOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:text="A variable that cannot change,read-only" />
+
+        <RadioButton
+            android:id="@+id/rbCanbeChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="A variable that can be changed" />
+        <RadioButton
+            android:id="@+id/rbStringInter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="A variable used for string interpolation" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="@string/question2"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        />
+    <CheckBox
+        android:id="@+id/chkExtensionFunction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Extension Functions" />
+    <CheckBox
+        android:id="@+id/chkNullSafety"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Null Safety" />
+    <CheckBox
+        android:id="@+id/chkNotFunctional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Not Functional Language" />
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/blue_walmart"
+        android:onClick="onSubmit"
+        android:text="Submit"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/blue_walmart"
+        android:onClick="onReset"
+        android:text="Reset"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

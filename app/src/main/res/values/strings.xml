@@ -1,4 +1,6 @@
 <resources>
-    <string name="app_name">Assignment Four</string>
+    <string name="app_name">Assignment Five</string>
     <string name="walmartlogo">Walmart Logo</string>
+    <string name="question1">What is an immutable variable?</string>
+    <string name="question2">What are the features you think are there in Kotlin but not in Java?</string>
 </resources>
