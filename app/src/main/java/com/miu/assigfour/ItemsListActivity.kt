@@ -48,34 +48,55 @@ class ItemsListActivity : AppCompatActivity() {
         val clothingItems = ArrayList<Product>()
         clothingItems.add(
             Product(
-                "Iphone",
+                "Clothing 1",
                 500,
                 "Blue",
-                R.drawable.blue_iphone,
+                R.drawable.cloth1,
                 "777899",
-                "IPhone - Blue Desc"
+                "Clothing 1 Desc"
             )
         )
         clothingItems.add(
             Product(
-                "Iphone",
-                600,
+                "Clothing 2",
+                500,
                 "Green",
-                R.drawable.green_iphone,
-                "8888",
-                "Iphone - Green description"
+                R.drawable.cloth2,
+                "748596",
+                "Clothing 2 Desc"
             )
         )
+        clothingItems.add(
+            Product(
+                "Clothing 3",
+                500,
+                "Light Blue",
+                R.drawable.cloth3,
+                "748596",
+                "Clothing 3 Desc"
+            )
+        )
+
 
         val beautyItems = ArrayList<Product>()
         beautyItems.add(
             Product(
-                "Iphone",
+                "Beauty Item 1",
                 500,
-                "Blue",
-                R.drawable.blue_iphone,
+                "Off-White",
+                R.drawable.beautyitem,
                 "777899",
-                "IPhone - Blue Desc"
+                "Beauty Item Desc"
+            )
+        )
+        beautyItems.add(
+            Product(
+                "Beauty Item 2",
+                500,
+                "Pink",
+                R.drawable.beautyitem2,
+                "777899",
+                "Beauty Item2 Desc"
             )
         )
 
@@ -83,12 +104,22 @@ class ItemsListActivity : AppCompatActivity() {
         val foodItems = ArrayList<Product>()
         foodItems.add(
             Product(
-                "Iphone",
+                "Bell Peper",
                 500,
-                "Blue",
-                R.drawable.blue_iphone,
+                "Green",
+                R.drawable.bellpeper,
                 "777899",
-                "IPhone - Blue Desc"
+                "Green Pepper"
+            )
+        )
+        foodItems.add(
+            Product(
+                "Egg Plant",
+                415,
+                "Black",
+                R.drawable.eggplant,
+                "777899",
+                "Black Egg Plant"
             )
         )
 
