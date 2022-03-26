@@ -1,4 +1,4 @@
-package com.miu.assigfour
+package com.miu.cvbuilder
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
