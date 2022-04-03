@@ -15,6 +15,6 @@ class MainActivity : AppCompatActivity() {
 
         // init views
         viewPager = findViewById(R.id.fragmentHolder)
-       
+
     }
 }
