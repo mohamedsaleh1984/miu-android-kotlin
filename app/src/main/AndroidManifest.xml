@@ -19,7 +19,7 @@
         </activity>
         />
         <activity
-            android:name=".MainActivity"
+            android:name=".EmptyActivity"
             android:exported="false">
 
         </activity>

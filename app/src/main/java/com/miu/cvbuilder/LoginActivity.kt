@@ -39,10 +39,7 @@ class LoginActivity : AppCompatActivity() {
         usersList.add(User("mega", "cccc", "1", "1"));
     }
 
-    override fun onResume() {
-        super.onResume()
-        Toast.makeText(this, "onResume.", Toast.LENGTH_SHORT).show()
-    }
+
 
     fun onClickSignIn(view: View) {
         var userName = editTextEmailAddress.text.toString();
@@ -78,10 +75,6 @@ class LoginActivity : AppCompatActivity() {
             }
         }
         return null
-    }
-
-    fun onCreateUser(view: View) {
-
     }
 
     fun onForgetPassword(view:View){
