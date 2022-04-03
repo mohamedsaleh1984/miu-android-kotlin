@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">CV Builder</string>
     <string name="cvbuilderlogo">CV Builder Logo</string>
+    <string name="aboutme">Some text</string>
+    <string name="dummy">dummy text</string>
+    <string name="careernote">dummy text</string>
+    <string name="profsummary">dummy text</string>
 </resources>
