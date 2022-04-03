@@ -75,6 +75,7 @@
         android:clickable="true"
         android:minHeight="48dp"
         android:onClick="onForgetPassword"
+        android:textColor="#592B61"
         android:text="Forget password?" />
 
     <Button
@@ -99,5 +100,5 @@
         android:background="@color/white"
         android:onClick="onCreateUser"
         android:text="Create a new account"
-        android:textColor="#1976D2" />
+        android:textColor="#592B61" />
 </LinearLayout>

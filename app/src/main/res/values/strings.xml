@@ -3,6 +3,8 @@
     <string name="cvbuilderlogo">CV Builder Logo</string>
     <string name="aboutme">Some text</string>
     <string name="dummy">dummy text</string>
-    <string name="careernote">dummy text</string>
-    <string name="profsummary">dummy text</string>
+    <string name="careernote">Career Note</string>
+    <string name="profsummary">Professional Summary</string>
+    <string name="about_me">About Me</string>
+    <string name="education">Education</string>
 </resources>

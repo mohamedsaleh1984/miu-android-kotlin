@@ -16,31 +16,12 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-
-        val intent = intent
-        val userFromCreateUserActivity = intent.getSerializableExtra("user")
-        if (userFromCreateUserActivity != null) {
-            userInfo = userFromCreateUserActivity as User;
-            usersList.add(
-                User(
-                    userInfo?.firstName,
-                    userInfo?.lastName,
-                    userInfo?.emailId,
-                    userInfo?.pwd
-                )
-            );
-        }
-
-
         usersList.add(User("Mohamed", "Saleh", "Mohamed@hotmail.com", "password"));
         usersList.add(User("Max", "Pain", "mohamedsaleh1984@hotmail.com", "password"));
-        usersList.add(User("Mark", "Williams", "Mark@hotmail.com", "password"));
-        usersList.add(User("Tolu", "Ademi", "Tolu@hotmail.com", "password"));
-        usersList.add(User("Fomi", "Deleki", "Fomi@hotmail.com", "password"));
-        usersList.add(User("mega", "cccc", "1", "1"));
+
+        editTextEmailAddress.setText( "Mohamed@hotmail.com")
+        editTextPassword.setText("password")
     }
-
-
 
     fun onClickSignIn(view: View) {
         var userName = editTextEmailAddress.text.toString();
@@ -58,7 +39,9 @@ class LoginActivity : AppCompatActivity() {
 
         userInfo = validateUserInputs(userName, password);
         if (userInfo != null) {
-           //Go to Main Activity
+            //Show Main Activity
+            var intent = Intent(this,MainActivity::class.java);
+            startActivity(intent)
 
         } else {
             Toast.makeText(this, "Wrong username or password.", Toast.LENGTH_LONG).show()
@@ -87,7 +70,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        if(emailAddress.length > 0){
+        if(emailAddress.isNotEmpty()){
             val intent = Intent()
             intent.action = Intent.ACTION_SEND
             intent.type = "text/plain"
