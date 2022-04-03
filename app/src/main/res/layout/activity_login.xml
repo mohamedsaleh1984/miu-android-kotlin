@@ -1,69 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="151dp"
         android:layout_height="92dp"
-        android:layout_marginTop="1dp"
-        android:contentDescription="@string/walmartlogo"
-        android:scaleType="fitCenter"
         android:layout_gravity="center"
-        android:src="@drawable/walmartlogo"
-        />
+        android:layout_marginTop="1dp"
+        android:contentDescription="@string/cvbuilderlogo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cv_builder_logo" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign in to your account"
-        android:textSize="23dp"
-        android:fontFamily="sans-serif-black"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="30dp"
-        android:layout_gravity="center" />
+        android:fontFamily="sans-serif-black"
+        android:text="Sign in to your account"
+        android:textSize="23dp" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="Enter address (required)" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Enter address (required)" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editTextEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/teal_700"
         android:ems="10"
         android:hint="Enter your email"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        android:backgroundTint="@color/blue_walmart"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Password (required)" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-     />
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Password (required)"
-            android:layout_marginLeft="30dp"/>
-
-        <EditText
-            android:id="@+id/editTextTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Enter your password"
-            android:inputType="textPassword"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:backgroundTint="@color/blue_walmart"
-            android:minHeight="48dp" />
+        android:backgroundTint="@color/teal_700"
+        android:ems="10"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
 
     <TextView
         android:id="@+id/tvForgetPwd"
@@ -75,6 +74,7 @@
         android:autoLink="all"
         android:clickable="true"
         android:minHeight="48dp"
+        android:onClick="onForgetPassword"
         android:text="Forget password?" />
 
     <Button
@@ -84,9 +84,10 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="50dp"
-        android:background="@color/blue_walmart"
+        android:background="@color/teal_700"
+        android:onClick="onClickSignIn"
         android:text="Sing In"
-        android:textColor="#000000" />
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/btnCreateNewAcct"
@@ -96,6 +97,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:background="@color/white"
+        android:onClick="onCreateUser"
         android:text="Create a new account"
         android:textColor="#1976D2" />
 </LinearLayout>
