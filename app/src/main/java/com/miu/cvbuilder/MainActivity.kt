@@ -11,16 +11,17 @@ import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var tabLayout: TabLayout
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         // init views
         val adapter = MyViewAdapter(supportFragmentManager,lifecycle)
-        viewpager.adapter = adapter
-        TabLayoutMediator(tlayaout,viewpager){tab,position->
+        viewPager.adapter = adapter
+
+        /* Setting up Tab Layout with the ViewPageg2 is handled by the TabLayoutMediator
+        * by passing your tablayout id and viewpager id*/
+        TabLayoutMediator(tlayaout,viewPager){tab,position->
             when(position){
                 0->{
                     tab.text="Home"
@@ -40,13 +41,20 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }.attach()
-
     }
-
+    override fun onBackPressed() {
+        if (viewPager.currentItem == 0) {
+            super.onBackPressed()
+        } else {
+            // Otherwise, select the previous step.
+            viewPager.currentItem = viewPager.currentItem - 1
+        }
+    }
+    //Adapter
     class MyViewAdapter(fm: FragmentManager, lc: Lifecycle) : FragmentStateAdapter(fm,lc) {
         override fun getItemCount(): Int = 4
         override fun createFragment(position: Int): Fragment {
-            return   when(position){
+            return when(position){
                 0->  HomeFragment()
                 1->  WorkFragment()
                 2-> ContactFragment()

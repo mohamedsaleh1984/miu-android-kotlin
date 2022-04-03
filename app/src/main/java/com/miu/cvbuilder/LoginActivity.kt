@@ -16,6 +16,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        //Hid Action Bar from Main Activity
+        supportActionBar?.hide()
+
         usersList.add(User("Mohamed", "Saleh", "Mohamed@hotmail.com", "password"));
         usersList.add(User("Max", "Pain", "mohamedsaleh1984@hotmail.com", "password"));
 
