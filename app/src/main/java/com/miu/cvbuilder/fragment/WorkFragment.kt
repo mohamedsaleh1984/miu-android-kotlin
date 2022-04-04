@@ -71,7 +71,14 @@ class WorkFragment : Fragment() {
                         "•\tEstablished e-mail alerting system including scheduling, e-mail templates, viewer based on Windows service.\n" +
                         "Technologies Used: .NET Framework 3.5 (C#.NET), MS Composite UI Application Block Framework, LINQ, SQL Server 2008, Crystal Reports 2010, TFS, Windows Services, JSON, SOAP, Web Services/API, Infragistics (Windows), LLBLGen 2.4 (ORM). \n",R.drawable.hmg))
 
-
-
+        workExps.add(
+            WorkExperince("Software Developer","LOGICA I-TECH","02/2014","12/2014","Egypt, Giza",
+                "Tasks Performed:\n" +
+                        "•\tCreate interactive applications for a single and multi-touch screen.\n" +
+                        "•\tDevelop IPC programs in Win32 / C++ to communicate with Action Script 3.\n" +
+                        "Achievements:\n" +
+                        "•\tProgram middleware to integrate Arduino, Action Script 3, and Windows application.\n" +
+                        "•\tProvide training on AS3 for newcomer software developers.\n" +
+                        "Technologies Used: .NET Framework, C#, Win32 API, C++, Micro-C, Arduino, ActionScript 3.\n",R.drawable.company_default_logo))
     }
 }

@@ -20,4 +20,7 @@
         <b>Tools:</b> VS1998-2022, VSCode, Eclipse IDE, Draw.IO, StarUML, Postman, Putty, SSH, FileZilla, Postman.\n
         <b>Platforms:</b> Windows, Linux, macOs\n
     </string>
+    <string name="projects">
+
+    </string>
 </resources>

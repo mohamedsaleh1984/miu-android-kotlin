@@ -36,12 +36,16 @@ class MainActivity : AppCompatActivity() {
                     tab.setIcon(R.drawable.ic_work)
                 }
                 2->{
-                    tab.text="Contact"
-                    tab.setIcon(R.drawable.ic_contact)
+                    tab.text = "Projects"
+                    tab.setIcon(R.drawable.ic_projects)
                 }
                 3->{
                     tab.text = "About Me"
                     tab.setIcon(R.drawable.ic_profile)
+                }
+                4->{
+                    tab.text="Contact"
+                    tab.setIcon(R.drawable.ic_contact)
                 }
             }
         }.attach()
