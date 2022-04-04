@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WorkFragment">
+    tools:context=".fragment.WorkFragment">
 
     <TextView
         android:id="@+id/text"
@@ -14,7 +14,16 @@
         android:text="Work Experience"
         android:textSize="20sp"
         android:textStyle="bold" />
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/work_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        tools:listitem="@layout/work_experience" />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"

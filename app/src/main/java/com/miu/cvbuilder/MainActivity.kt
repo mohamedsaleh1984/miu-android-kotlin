@@ -6,8 +6,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.miu.cvbuilder.adapters.MyViewAdapter
+import com.miu.cvbuilder.fragment.AboutMeFragment
+import com.miu.cvbuilder.fragment.ContactFragment
+import com.miu.cvbuilder.fragment.HomeFragment
+import com.miu.cvbuilder.fragment.WorkFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -50,19 +54,4 @@ class MainActivity : AppCompatActivity() {
             viewPager.currentItem = viewPager.currentItem - 1
         }
     }
-    //Adapter
-    class MyViewAdapter(fm: FragmentManager, lc: Lifecycle) : FragmentStateAdapter(fm,lc) {
-        override fun getItemCount(): Int = 4
-        override fun createFragment(position: Int): Fragment {
-            return when(position){
-                0->  HomeFragment()
-                1->  WorkFragment()
-                2-> ContactFragment()
-                3->  AboutMeFragment()
-                else-> Fragment()
-            }
-        }
-    }
-
-
 }

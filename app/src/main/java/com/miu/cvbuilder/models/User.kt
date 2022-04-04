@@ -1,4 +1,4 @@
-package com.miu.cvbuilder.modles
+package com.miu.cvbuilder.models
 import java.io.Serializable;
 class User(var firstName: String?, var lastName: String?, var emailId: String?, var pwd: String?) :
     Serializable {
