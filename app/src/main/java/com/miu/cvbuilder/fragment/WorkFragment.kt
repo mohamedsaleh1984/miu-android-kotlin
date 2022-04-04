@@ -50,6 +50,27 @@ class WorkFragment : Fragment() {
                     "•\tDeveloped annotation-based framework to dynamically generate CRUD operations (Back-end/Front-end) and client-side validation for specific table schema.\n" +
                     "Technologies Used: C# Language, .Net Core, REST API, Vue.JS, ReactJS, TypeScript, AzureDevOps CI/CD, Yaml, MS SQL 2019, Docker, Git, Agile.\n",R.drawable.evero))
 
+        workExps.add(
+            WorkExperince("Microsoft Dynamics Developer ","Genena Group","01/2019","01/2020","Egypt, New Cairo",
+                "Tasks Performed:\n" +
+                        "•\tLed design of new AX modules and added new features and customizations, security for modules\n" +
+                        "•\tDesign and integrate SSRS reports with MS Dynamics AX 2012 R3.\n" +
+                        "•\tCoordinate production environment backups and releases.\n" +
+                        "Achievement:\n" +
+                        "•\tIntroduced and Implemented Property Management module instead of buying another product and integrate it to Dynamics AX.\n" +
+                        "Technologies Used: X++, AOT, MS SQL (TSQL), SSRS, .NET Framework 4.6 (C#.NET).\n" +
+                        "" +
+                        "",R.drawable.company_default_logo))
+
+        workExps.add(
+            WorkExperince("Backend Software Developer","DR SULAIMAN AL HABIB MEDICAL GROUP","01/2015","07/2017","Saudi Arabia, Riyadh",
+                "Tasks Performed:\n" +
+                        "•\tDevelop different sub-modules (Infection Control, Doctor Workspace)\n" +
+                        "•\tWrite complex SQL queries, triggers, and stored procedures.\n" +
+                        "Achievements:\n" +
+                        "•\tEstablished e-mail alerting system including scheduling, e-mail templates, viewer based on Windows service.\n" +
+                        "Technologies Used: .NET Framework 3.5 (C#.NET), MS Composite UI Application Block Framework, LINQ, SQL Server 2008, Crystal Reports 2010, TFS, Windows Services, JSON, SOAP, Web Services/API, Infragistics (Windows), LLBLGen 2.4 (ORM). \n",R.drawable.hmg))
+
 
 
     }

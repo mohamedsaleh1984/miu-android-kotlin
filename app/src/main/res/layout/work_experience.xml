@@ -18,6 +18,7 @@
                 android:id="@+id/img_cop_logo"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_margin="5dp"
                 android:src="@drawable/company_default_logo"
                 />
             <LinearLayout
@@ -80,6 +81,7 @@
             android:id="@+id/description"
             android:textSize="16sp"
             android:text="Description"
+            android:layout_margin="16px"
             />
 
     </LinearLayout>
