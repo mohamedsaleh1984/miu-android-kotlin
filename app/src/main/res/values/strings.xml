@@ -21,6 +21,11 @@
         <b>Platforms:</b> Windows, Linux, macOs\n
     </string>
     <string name="projects">
-
+        <b>Information Retrieval System (2014):</b> Provided searching feature for large-scale text pool including document indexing, searching, and ranking. Technologies Used: Lucene.NET 3.0.3 / C#.NET.\n
+        <b>File Parser (2014):</b> Developed file parser for frenetic network programming language. Technologies Used: C++ Language.\n
+        <b>Al-Azhar Web Book (2013):</b> Convert Paper-Pack Arabic Learning Material into Digital format on CDs. Technologies Used: VB.NET, HTML, CSS, and JavaScript.\n
+        <b>School Messaging System (2013):</b> Provided SMS functionality to pre-developed School Management application. Technologies Used: VB.NET.\n
+        <b>Goal (2012):</b> Created system to keep track of players actions during match. Technologies Used: VB.NET, Access, Crystal Reports.\n
+   <b>Aviation Scheduling CG (2012):</b> Developed system directed to help specific small jets with no center of gravity on board to help crew to distribute passengers. Technologies Used: VB.NET, Access.\n
     </string>
 </resources>
