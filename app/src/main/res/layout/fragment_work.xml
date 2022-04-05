@@ -30,8 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="10dp"
+        android:layout_margin="18dp"
         app:srcCompat="@android:drawable/ic_input_add"
+
         android:layout_alignParentRight="true" />
 
 </RelativeLayout>

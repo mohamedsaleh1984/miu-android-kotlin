@@ -1,15 +1,19 @@
 package com.miu.cvbuilder.fragment
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.miu.cvbuilder.R
 import com.miu.cvbuilder.adapters.WorkExperienceAdapter
 import com.miu.cvbuilder.models.WorkExperince
+import kotlinx.android.synthetic.main.fragment_contact.*
 import kotlinx.android.synthetic.main.fragment_work.*
 
 class WorkFragment : Fragment() {
@@ -33,6 +37,12 @@ class WorkFragment : Fragment() {
         work_recycler.layoutManager = LinearLayoutManager(requireContext())
         wrkExpAdapter = WorkExperienceAdapter(workExps)
         work_recycler.adapter = wrkExpAdapter
+
+        fab.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(view: View?) {
+                Toast.makeText(activity,"Test",Toast.LENGTH_LONG).show()
+            }
+        })
     }
 
 
