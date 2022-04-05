@@ -1,6 +1,8 @@
 package com.miu.cvbuilder
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -9,7 +11,7 @@ import com.miu.cvbuilder.models.User
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
-
+    lateinit var spf:SharedPreferences
     var usersList: ArrayList<User> = ArrayList<User>();
     var userInfo: User? = User("", "", "", "");
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,26 +24,36 @@ class LoginActivity : AppCompatActivity() {
         usersList.add(User("Mohamed", "Saleh", "Mohamed@hotmail.com", "password"));
         usersList.add(User("Max", "Pain", "mohamedsaleh1984@hotmail.com", "password"));
 
-        editTextEmailAddress.setText( "Mohamed@hotmail.com")
-        editTextPassword.setText("password")
+        spf = getSharedPreferences("login", Context.MODE_PRIVATE)
+        val emailAddress = spf.getString("email","");
+        val pwd = spf.getString("password","");
+
+        editTextEmailAddress.setText(emailAddress)
+        editTextPassword.setText(pwd)
+        //editTextEmailAddress.setText( "Mohamed@hotmail.com")
+        //editTextPassword.setText("password")
     }
 
     fun onClickSignIn(view: View) {
-        var userName = editTextEmailAddress.text.toString();
-        var password = editTextPassword.text.toString();
+        val emailAddress = spf.getString("email","Mohamed@hotmail.com");
+        val pwd = spf.getString("password","password");
 
-        if (userName.isNullOrEmpty()) {
+        //var userName = editTextEmailAddress.text.toString();
+        //var password = editTextPassword.text.toString();
+
+        if (emailAddress.isNullOrEmpty()) {
             Toast.makeText(this, "Username is required.", Toast.LENGTH_LONG).show()
             return;
         }
 
-        if (password.isNullOrEmpty()) {
+        if (pwd.isNullOrEmpty()) {
             Toast.makeText(this, "Password is required.", Toast.LENGTH_LONG).show()
             return;
         }
 
-        userInfo = validateUserInputs(userName, password);
+        userInfo = validateUserInputs(emailAddress, pwd);
         if (userInfo != null) {
+            Toast.makeText(applicationContext,"Successful Login",Toast.LENGTH_LONG).show()
             //Show Main Activity
             var intent = Intent(this,MainActivity::class.java);
             startActivity(intent)
