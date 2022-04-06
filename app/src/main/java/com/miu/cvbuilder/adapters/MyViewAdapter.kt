@@ -11,10 +11,10 @@ class MyViewAdapter(fm: FragmentManager, lc: Lifecycle) : FragmentStateAdapter(f
     override fun getItemCount(): Int = 5
     override fun createFragment(position: Int): Fragment {
         return when(position){
-            0->  HomeFragment()
-            1->  WorkFragment()
+            0-> HomeFragment()
+            1-> WorkFragment()
             2-> ProjectsFragment()
-            3->  AboutMeFragment()
+            3-> AboutMeFragment()
             4-> ContactFragment()
             else-> Fragment()
         }

@@ -1,27 +1,26 @@
 package com.miu.cvbuilder.fragment
 
-import android.app.AlertDialog
-import android.app.Dialog
-import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.miu.cvbuilder.R
 import com.miu.cvbuilder.WorkExpDialog
+import com.miu.cvbuilder.adapters.OnAddWorkExperienceListener
 import com.miu.cvbuilder.adapters.WorkExperienceAdapter
 import com.miu.cvbuilder.models.WorkExperince
-import kotlinx.android.synthetic.main.fragment_contact.*
 import kotlinx.android.synthetic.main.fragment_work.*
 
 
-class WorkFragment : Fragment() {
+class WorkFragment : Fragment(), OnAddWorkExperienceListener {
     private lateinit var wrkExpAdapter: WorkExperienceAdapter
-    private var workExps = ArrayList<WorkExperince>()
+    lateinit var fabButton: FloatingActionButton
+
+    var workExps = ArrayList<WorkExperince>()
     private lateinit var recyclerView: RecyclerView
 
     override fun onCreateView(
@@ -34,23 +33,18 @@ class WorkFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recyclerView = view.findViewById(R.id.work_recycler)
-
+        fabButton = view.findViewById(R.id.fab)
+        fabButton.setOnClickListener { showAdWorkExperienceFragment() }
         setDataSeeding()
 
         work_recycler.layoutManager = LinearLayoutManager(requireContext())
         wrkExpAdapter = WorkExperienceAdapter(workExps)
         work_recycler.adapter = wrkExpAdapter
-
-        fab.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(view: View?) {
-                val wex = WorkExpDialog();
-                wex.show(childFragmentManager,"MyCustomFragment")
-               // WorkExpDialog().show(childFragmentManager,"MyCustomFragment")
-
-            }
-        })
     }
 
+    private fun showAdWorkExperienceFragment() {
+        WorkExpDialog(this).show(childFragmentManager, "WorkExpDialogTAG")
+    }
 
     private fun setDataSeeding(){
         workExps.add(
@@ -97,4 +91,11 @@ class WorkFragment : Fragment() {
                         "•\tProvide training on AS3 for newcomer software developers.\n" +
                         "Technologies Used: .NET Framework, C#, Win32 API, C++, Micro-C, Arduino, ActionScript 3.\n",R.drawable.company_default_logo))
     }
+
+    override fun onAddWork(workExperinceEntry: WorkExperince) {
+        workExps.add(workExperinceEntry)
+        wrkExpAdapter.notifyItemInserted(workExps.size)
+    }
 }
+
+
