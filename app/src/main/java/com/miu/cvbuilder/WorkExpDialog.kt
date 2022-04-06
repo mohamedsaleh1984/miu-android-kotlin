@@ -1,6 +1,5 @@
 package com.miu.cvbuilder
 
-import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -47,11 +46,9 @@ class WorkExpDialog(private val onAddWork: OnAddWorkExperienceListener) : Dialog
     private fun onClickCancel(){
         this.dismiss()
     }
-
     override fun onStart() {
         super.onStart()
         val width = (resources.displayMetrics.widthPixels * 0.85).toInt()
         dialog!!.window?.setLayout(width,ViewGroup.LayoutParams.WRAP_CONTENT);
     }
-
 }

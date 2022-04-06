@@ -23,37 +23,44 @@ class ContactFragment : Fragment( ) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        tvPhone.setOnClickListener(object : OnClickListener {
-            override fun onClick(view: View?) {
-                val addressUri = Uri.parse("tel:+1292628798")
-                val intent = Intent(Intent.ACTION_DIAL, addressUri)
-                getActivity()?.startActivity(intent)
-            }
-        })
+        tvPhone.setOnClickListener({CallNumber()})
+        img_phone.setOnClickListener({CallNumber()})
+        tvPhone2.setOnClickListener({CallNumber()})
 
-        tv_email.setOnClickListener(object : OnClickListener {
-            override fun onClick(view: View?) {
-                val addressUri = Uri.parse("mailto:mohamedsaleh1984@hotmail.com")
-                val intent = Intent(Intent.ACTION_SENDTO, addressUri)
-                getActivity()?.startActivity(intent)
-            }
-        })
+        tv_email.setOnClickListener({SendEmail()})
+        email.setOnClickListener({SendEmail()})
+        emailImg.setOnClickListener({SendEmail()})
 
-        tvlinkedIn.setOnClickListener(object : OnClickListener {
-            override fun onClick(view: View?) {
-                val addressUri = Uri.parse("https://www.linkedin.com/in/mohamedsaleh1984/")
-                val intent = Intent(Intent.ACTION_VIEW, addressUri)
-                getActivity()?.startActivity(intent)
-            }
-        })
+        tvlinkedIn.setOnClickListener({OpenLinkedIn()})
+        tvlinkedIn2.setOnClickListener({OpenLinkedIn()})
+        img_linkedIn.setOnClickListener({OpenLinkedIn()})
 
-        tvGit.setOnClickListener(object : OnClickListener {
-            override fun onClick(view: View?) {
-                val addressUri = Uri.parse("https://github.com/mohamedsaleh1984")
-                val intent = Intent(Intent.ACTION_VIEW, addressUri)
-                getActivity()?.startActivity(intent)
-            }
-        })
+        tvGit.setOnClickListener({OpenGitHub()})
+        tvGit2.setOnClickListener({OpenGitHub()})
+        gitImg.setOnClickListener({OpenGitHub()})
+    }
 
+    private fun OpenLinkedIn(){
+        val addressUri = Uri.parse("https://www.linkedin.com/in/mohamedsaleh1984/")
+        val intent = Intent(Intent.ACTION_VIEW, addressUri)
+        getActivity()?.startActivity(intent)
+    }
+
+    private fun SendEmail(){
+        val addressUri = Uri.parse("mailto:mohamedsaleh1984@hotmail.com")
+        val intent = Intent(Intent.ACTION_SENDTO, addressUri)
+        getActivity()?.startActivity(intent)
+    }
+
+    private fun CallNumber(){
+        val addressUri = Uri.parse("tel:+1292628798")
+        val intent = Intent(Intent.ACTION_DIAL, addressUri)
+        getActivity()?.startActivity(intent)
+    }
+
+    private fun OpenGitHub(){
+        val addressUri = Uri.parse("https://github.com/mohamedsaleh1984")
+        val intent = Intent(Intent.ACTION_VIEW, addressUri)
+        getActivity()?.startActivity(intent)
     }
 }
