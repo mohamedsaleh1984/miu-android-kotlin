@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = adapter
 
         /* Setting up Tab Layout with the ViewPageg2 is handled by the TabLayoutMediator
-        * by passing your tablayout id and viewpager id*/
-        TabLayoutMediator(tablayaout,viewPager){tab,position->
+        * by passing your tabLayout id and viewpager id*/
+        TabLayoutMediator(tabLayout,viewPager){tab,position->
             when(position){
                 0->{
                     tab.text="Home"

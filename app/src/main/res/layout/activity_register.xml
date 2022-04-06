@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white"
-    tools:context=".LoginActivity"
+    tools:context=".RegisterActivity"
     android:orientation="vertical">
 
     <ImageView
@@ -25,7 +25,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="30dp"
         android:fontFamily="sans-serif-black"
-        android:text="Sign in to your account"
+        android:text="Please enter your Info"
         android:textSize="23dp" />
 
     <TextView
@@ -68,25 +68,15 @@
         android:layout_marginBottom="90dp"/>
 
     <Button
-        android:id="@+id/btnSignIn"
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="20dp"
         android:background="@color/teal_700"
-        android:onClick="onClickSignIn"
-        android:text="Sing In"
-        android:textColor="#FFFFFF" />
-    <Button
-        android:id="@+id/btnCreateNewAcct"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:background="@color/white"
         android:onClick="onRegister"
-        android:text="New Register"
-        android:textColor="#592B61" />
+        android:text="Register"
+        android:textColor="#FFFFFF" />
+
 </LinearLayout>
