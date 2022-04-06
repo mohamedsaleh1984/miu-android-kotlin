@@ -43,9 +43,9 @@ class WorkFragment : Fragment() {
 
         fab.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {
-                Toast.makeText(activity,"Test",Toast.LENGTH_LONG).show()
-
-                WorkExpDialog().show(childFragmentManager,"MyCustomFragment")
+                val wex = WorkExpDialog();
+                wex.show(childFragmentManager,"MyCustomFragment")
+               // WorkExpDialog().show(childFragmentManager,"MyCustomFragment")
 
             }
         })
