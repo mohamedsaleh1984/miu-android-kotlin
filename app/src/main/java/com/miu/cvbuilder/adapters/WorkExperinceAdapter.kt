@@ -10,14 +10,13 @@ import com.miu.cvbuilder.R
 import com.miu.cvbuilder.models.WorkExperince
 
 class WorkExperienceAdapter (var workExplist:ArrayList<WorkExperince>) : RecyclerView.Adapter<WorkExperienceAdapter.WorkExpViewHolder>(){
-    var onItemClick: ((WorkExperince) -> Unit)? = null
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WorkExperienceAdapter.WorkExpViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WorkExpViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.work_experience,parent,false)
         return WorkExpViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: WorkExperienceAdapter.WorkExpViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: WorkExpViewHolder, position: Int) {
         val workEntry = workExplist[position]
         holder.imageView.setImageResource(workEntry.image)
         holder.jobTitle.text = workEntry.jobTitle

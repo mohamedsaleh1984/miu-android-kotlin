@@ -92,8 +92,10 @@ class WorkFragment : Fragment(), OnAddWorkExperienceListener {
                         "Technologies Used: .NET Framework, C#, Win32 API, C++, Micro-C, Arduino, ActionScript 3.\n",R.drawable.company_default_logo))
     }
 
-    override fun onAddWork(workExperinceEntry: WorkExperince) {
-        workExps.add(workExperinceEntry)
+    override fun onAddWork(workExperienceEntry: WorkExperince) {
+        //push the data from the Dialog
+        workExps.add(workExperienceEntry)
+        //Notify the RecyclerView to redraw the list.
         wrkExpAdapter.notifyItemInserted(workExps.size)
     }
 }
