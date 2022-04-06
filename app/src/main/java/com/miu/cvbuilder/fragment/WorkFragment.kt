@@ -34,7 +34,7 @@ class WorkFragment : Fragment(), OnAddWorkExperienceListener {
         super.onViewCreated(view, savedInstanceState)
         recyclerView = view.findViewById(R.id.work_recycler)
         fabButton = view.findViewById(R.id.fab)
-        fabButton.setOnClickListener { showAdWorkExperienceFragment() }
+        fabButton.setOnClickListener { showAddWorkExperienceFragment() }
         setDataSeeding()
 
         work_recycler.layoutManager = LinearLayoutManager(requireContext())
@@ -42,7 +42,7 @@ class WorkFragment : Fragment(), OnAddWorkExperienceListener {
         work_recycler.adapter = wrkExpAdapter
     }
 
-    private fun showAdWorkExperienceFragment() {
+    private fun showAddWorkExperienceFragment() {
         WorkExpDialog(this).show(childFragmentManager, "WorkExpDialogTAG")
     }
 
