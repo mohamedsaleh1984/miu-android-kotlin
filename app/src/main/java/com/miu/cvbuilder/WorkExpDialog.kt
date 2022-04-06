@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import android.widget.Button
 import androidx.fragment.app.DialogFragment
 import com.miu.cvbuilder.adapters.OnAddWorkExperienceListener
 import com.miu.cvbuilder.models.WorkExperince
@@ -16,15 +18,16 @@ class WorkExpDialog(private val onAddWork: OnAddWorkExperienceListener) : Dialog
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.work_exp_dialog,container,false)
-    }
+        var view:View= inflater.inflate(R.layout.work_exp_dialog, container, false);
+        dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        /*
-        btnCancel.setOnClickListener({onClickCancel()})
-        btnAdd.setOnClickListener({onClickAdd()})
-        */
-        return super.onCreateDialog(savedInstanceState)
+        var add:Button = view.findViewById(R.id.btnAdd)
+        add.setOnClickListener { onClickAdd() }
+
+        var cancel:Button = view.findViewById(R.id.btnCancel)
+        cancel.setOnClickListener { onClickCancel() }
+
+        return view;
     }
 
     private fun onClickAdd(){
