@@ -35,7 +35,7 @@
 
                     <TextView
                         android:id="@+id/tvPhone"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="8dp"
@@ -46,7 +46,7 @@
 
                     <TextView
                         android:id="@+id/tvPhone2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
                         android:text="Mobile"
@@ -79,7 +79,7 @@
 
                     <TextView
                         android:id="@+id/tv_email"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="8dp"
@@ -90,7 +90,7 @@
 
                     <TextView
                         android:id="@+id/email"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
                         android:text="E-mail Address"
@@ -134,7 +134,7 @@
 
                     <TextView
                         android:id="@+id/tvlinkedIn2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
                         android:text="LinkedIn Profile"
@@ -168,7 +168,7 @@
 
                     <TextView
                         android:id="@+id/tvGit"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="8dp"
@@ -179,7 +179,7 @@
 
                     <TextView
                         android:id="@+id/tvGit2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
                         android:text="Github Profile"

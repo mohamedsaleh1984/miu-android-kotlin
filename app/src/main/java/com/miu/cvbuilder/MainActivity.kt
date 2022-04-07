@@ -84,9 +84,7 @@ class MainActivity : AppCompatActivity() {
             val text ="Hi, Moe"
             intent.`package`= whatsAppAppId
             intent.putExtra(Intent.EXTRA_TEXT, text);
-            //startActivity(intent)
             startActivity(Intent.createChooser(intent, "Share with"));
-
         } catch (e: PackageManager.NameNotFoundException) {
             Toast.makeText(applicationContext, "You need to install WhatsApp", Toast.LENGTH_LONG).show()
         }
