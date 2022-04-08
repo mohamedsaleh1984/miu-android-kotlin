@@ -43,7 +43,7 @@ class ContactFragment : Fragment() {
     private fun openLinkedIn() {
         val addressUri = Uri.parse("https://www.linkedin.com/in/mohamedsaleh1984/")
         val intent = Intent(Intent.ACTION_VIEW, addressUri)
-        getActivity()?.startActivity(intent)
+        startActivity(intent)
     }
 
     private fun sendEmail() {
@@ -57,12 +57,12 @@ class ContactFragment : Fragment() {
     private fun callNumber() {
         val addressUri = Uri.parse("tel:+19292628798")
         val intent = Intent(Intent.ACTION_DIAL, addressUri)
-        activity?.startActivity(intent)
+        startActivity(intent)
     }
 
     private fun openGitHub() {
         val addressUri = Uri.parse("https://github.com/mohamedsaleh1984")
         val intent = Intent(Intent.ACTION_VIEW, addressUri)
-        activity?.startActivity(intent)
+        startActivity(intent)
     }
 }

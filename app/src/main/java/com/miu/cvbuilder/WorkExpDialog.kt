@@ -46,6 +46,7 @@ class WorkExpDialog(private val onAddWork: OnAddWorkExperienceListener) : Dialog
     private fun onClickCancel(){
         this.dismiss()
     }
+
     override fun onStart() {
         super.onStart()
         val width = (resources.displayMetrics.widthPixels * 0.85).toInt()

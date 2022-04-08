@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="monospace"
-        android:text="Software Engineer"
+        android:text="Software Developer"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView"
@@ -105,7 +105,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/education" />
+                android:text="@string/education"
+                android:scrollbars="vertical"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

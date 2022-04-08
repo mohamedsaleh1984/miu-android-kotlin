@@ -4,13 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.miu.cvbuilder.models.User
 import kotlinx.android.synthetic.main.activity_login.*
-import java.util.logging.Level.INFO
 
 class LoginActivity : AppCompatActivity() {
     lateinit var spf:SharedPreferences
@@ -39,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
     fun onClickSignIn(view: View) {
 
         if (editTextEmailAddress.text.isNullOrEmpty()) {
-            Toast.makeText(this, "Username is required.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Email address is required.", Toast.LENGTH_LONG).show()
             return;
         }
 
@@ -58,7 +55,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
 
         } else {
-            Toast.makeText(this, "Wrong username or password.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Wrong email address or password.", Toast.LENGTH_LONG).show()
         }
     }
 }
